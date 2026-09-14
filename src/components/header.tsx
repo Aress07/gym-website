@@ -91,7 +91,7 @@ export function Header({ locale }: { locale: Locale }) {
               <span className="block font-extrabold tracking-tight text-navy uppercase">
                 {SITE.name}
               </span>
-              <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-pink lg:text-xs">
+              <span className="hidden min-[400px]:block text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-pink lg:text-xs">
                 Danse · Fitness · Pilates
               </span>
             </span>

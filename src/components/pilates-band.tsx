@@ -4,7 +4,7 @@ import type { Dictionary } from "@/lib/i18n";
 
 export function PilatesBand({ dict }: { dict: Dictionary }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-navy via-[#2a1a7a] to-royal py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-r from-navy via-[#2a1a7a] to-royal py-14 lg:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div>
           <p className="inline-block rounded-full bg-orange px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.2em] text-ink">

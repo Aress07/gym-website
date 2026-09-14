@@ -5,7 +5,7 @@ import type { Dictionary } from "@/lib/i18n";
 
 export function Reviews({ dict }: { dict: Dictionary }) {
   return (
-    <section id="avis" className="scroll-mt-28 bg-sky py-20 lg:py-28">
+    <section id="avis" className="scroll-mt-28 bg-sky py-14 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={dict.reviews.eyebrow}

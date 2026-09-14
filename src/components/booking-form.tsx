@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { SectionHeading } from "@/components/section-heading";
+import { ChevronDownIcon } from "@/components/icons";
 import { getDictionary, type Locale } from "@/lib/i18n";
 
 type Status = "idle" | "submitting" | "success" | "error" | "config";
@@ -69,7 +70,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
     "w-full rounded-xl border border-sky bg-white px-4 py-3 text-sm text-ink placeholder:text-grey outline-none transition-colors focus:border-pink";
 
   return (
-    <section id="reservation" className="scroll-mt-28 bg-navy py-20 lg:py-28">
+    <section id="reservation" className="scroll-mt-28 bg-navy py-14 lg:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={dict.booking.eyebrow}
@@ -96,29 +97,35 @@ export function BookingForm({ locale }: { locale: Locale }) {
             </label>
             <label className="block">
               <span className="mb-1.5 block text-sm font-bold text-navy">{dict.booking.course}</span>
-              <select name="course" required defaultValue="" className={`${inputClass} appearance-none`}>
-                <option value="" disabled>
-                  {dict.booking.coursePlaceholder}
-                </option>
-                {dict.classes.formOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
+              <span className="relative block">
+                <select name="course" required defaultValue="" className={`${inputClass} appearance-none pr-10`}>
+                  <option value="" disabled>
+                    {dict.booking.coursePlaceholder}
                   </option>
-                ))}
-              </select>
+                  {dict.classes.formOptions.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDownIcon className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-grey" />
+              </span>
             </label>
             <label className="block">
               <span className="mb-1.5 block text-sm font-bold text-navy">{dict.booking.level}</span>
-              <select name="level" required defaultValue="" className={`${inputClass} appearance-none`}>
-                <option value="" disabled>
-                  {dict.booking.levelPlaceholder}
-                </option>
-                {dict.booking.levels.map((level) => (
-                  <option key={level} value={level}>
-                    {level}
+              <span className="relative block">
+                <select name="level" required defaultValue="" className={`${inputClass} appearance-none pr-10`}>
+                  <option value="" disabled>
+                    {dict.booking.levelPlaceholder}
                   </option>
-                ))}
-              </select>
+                  {dict.booking.levels.map((level) => (
+                    <option key={level} value={level}>
+                      {level}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDownIcon className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-grey" />
+              </span>
             </label>
             <label className="block sm:col-span-2">
               <span className="mb-1.5 block text-sm font-bold text-navy">{dict.booking.slot}</span>

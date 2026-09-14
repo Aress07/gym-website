@@ -7,7 +7,7 @@ import type { Dictionary } from "@/lib/i18n";
 
 export function Schedule({ dict }: { dict: Dictionary }) {
   return (
-    <section id="planning" className="scroll-mt-28 bg-cream py-20 lg:py-28">
+    <section id="planning" className="scroll-mt-28 bg-cream py-14 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={dict.schedule.eyebrow}
@@ -27,7 +27,7 @@ export function Schedule({ dict }: { dict: Dictionary }) {
               </a>
             </div>
             <a href="/images/planning-2026-2027.jpeg" target="_blank" rel="noopener noreferrer" className="group mt-5 block">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[0.9rem] bg-sky">
+              <div className="relative aspect-square overflow-hidden rounded-[0.9rem] bg-sky sm:aspect-[4/5]">
                 <Image
                   src="/images/planning-2026-2027.jpeg"
                   alt={dict.schedule.planningTitle}

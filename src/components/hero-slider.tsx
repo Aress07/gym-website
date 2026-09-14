@@ -30,7 +30,7 @@ export function HeroSlider({ locale }: { locale: Locale }) {
   }, [slides.length]);
 
   return (
-    <section id="top" className="relative h-[calc(100svh-6.5rem)] min-h-[560px] w-full overflow-hidden bg-navy">
+    <section id="top" className="relative h-[calc(100svh-4rem)] min-h-[600px] w-full overflow-hidden bg-navy lg:h-[calc(100svh-6.5rem)]">
       <div className="absolute inset-0">
         {HERO_IMAGES.map((src, i) => (
           <div
@@ -54,7 +54,7 @@ export function HeroSlider({ locale }: { locale: Locale }) {
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-navy/40" />
       </div>
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-4 pb-16 sm:px-6 sm:pb-0 lg:px-8">
         <div key={index} className="max-w-3xl animate-fade-up text-white">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-orange px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.18em] text-ink">
             {dict.hero.eyebrow}
@@ -68,16 +68,16 @@ export function HeroSlider({ locale }: { locale: Locale }) {
           <p className="mt-5 max-w-xl text-base font-medium text-white/90 sm:text-lg">
             {dict.hero.subtitle}
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full bg-pink px-7 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(255,30,162,0.45)] transition-all hover:bg-magenta"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-pink px-7 py-3.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(255,30,162,0.45)] transition-all hover:bg-magenta sm:justify-start"
             >
               {dict.hero.ctaPrimary}
             </Link>
             <a
               href="#cours"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-white/80 px-7 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white hover:text-navy"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/80 px-7 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white hover:text-navy sm:justify-start"
             >
               {dict.hero.ctaSecondary}
             </a>
